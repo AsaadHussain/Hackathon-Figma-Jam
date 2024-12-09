@@ -43,7 +43,7 @@ export default function Shop() {
 
             <div className="flex items-center justify-center w-full">
                 <div className="py-11 grid grid-cols-4 gap-5 w-[88%]">
-                    {Array(16).fill().map((_, index) => (
+                    {Array(16).fill(null).map((_, index) => (
                         <Card key={index} />
                     ))}
                 </div>

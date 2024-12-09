@@ -42,7 +42,7 @@ export default function Home() {
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 pt-12 pb-3">
                     {Array(4)
-                        .fill()
+                        .fill(null)
                         .map((_, index) => (
                             <Card key={index} />
                         ))}
@@ -82,7 +82,7 @@ export default function Home() {
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pt-12 pb-3">
                     {Array(3)
-                        .fill()
+                        .fill(null)
                         .map((_, index) => (
                             <div key={index} className="flex flex-col items-center text-center bg-white shadow-lg p-4 rounded-lg">
                                 <img className="w-full h-[200px] object-cover rounded-t-lg" src={`./Rectangle 1${3 + index}.png`} alt="Blog" />
