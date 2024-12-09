@@ -180,7 +180,7 @@ export default function Shop() {
                 </div>
                 <div className="flex items-center justify-center pt-24 pb-3">
                     {
-                        Array(4).fill().map((_, index) => (
+                        Array(4).fill(null).map((_, index) => (
                             <Card key={index} />
                         ))
                     }
