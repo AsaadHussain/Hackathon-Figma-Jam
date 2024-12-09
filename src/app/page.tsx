@@ -1,101 +1,226 @@
-import Image from "next/image";
+
+import Card from "@/app/components/Card/page";
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    return (
+        <>
+        
+            <div className="flex items-center justify-center p-0 m-0" style={{ backgroundColor: "#fbebb5" }}>
+                <div className="flex-col justify-end items-center p-0 m-0 w-[35%]">
+                    <div className="p-0 m-0 poppins font-[500] text-[64px]">
+                        <h1>
+                            Rocket single seater
+                        </h1>
+                    </div>
+                    <div className="poppins font-[500] text-[24px] pt-10">
+                        <button className="border-b-[3px] border-black pb-2">
+                            Shop Now
+                        </button>
+                    </div>
+                </div>
+                <div className="">
+                    <img className="w-[600px] h-[850px]" src="./Rocket single seater 1.png" alt="" />
+                </div>
+            </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+            <div className="flex items-center justify-evenly py-16 m-0" style={{ backgroundColor: "#faf4f4" }}>
+                <div className="flex-col justify-end items-center p-0 m-0">
+                    <div className="px-4 py-2">
+                        <img className="w-[390px] h-[300px]" src="./Granite square side table 1.png" alt="" />
+                    </div>
+                    <div className="p-0 m-0 poppins font-[500] text-[36px]">
+                        <h1>
+                            Side table
+                        </h1>
+                    </div>
+                    <div className="poppins font-[500] text-[24px] pt-6">
+                        <button className="border-b-[3px] border-black pb-2">
+                            View More
+                        </button>
+                    </div>
+                </div>
+                <div className="flex-col justify-end items-center p-0 m-0">
+                    <div className="px-4 py-2">
+                        <img className="w-[400px] h-[290px]" src="./Cloud sofa three seater + ottoman_3 1.png" alt="" />
+                    </div>
+                    <div className="p-0 m-0 poppins font-[500] text-[36px]">
+                        <h1>
+                            Side table
+                        </h1>
+                    </div>
+                    <div className="poppins font-[500] text-[24px] pt-6">
+                        <button className="border-b-[3px] border-black pb-2">
+                            View More
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div className="flex flex-col items-center justify-center min-h-screen py-16 bg-white w-full">
+                <div className="poppins font-[500] text-[36px] text-center">
+                    <h1>Top Picks For You</h1>
+                </div>
+                <div className="poppins font-[500] text-[16px] pt-4 text-center" style={{ color: '#9f9f9f' }}>
+                    <p>
+                        Find a bright ideal to suit your taste with our great selection of suspension, floor and table lights.
+                    </p>
+                </div>
+                <div className="flex items-center justify-center pt-24 pb-3">
+                    {
+                        Array(4).fill().map((_, index) => (
+                            <Card key={index} />
+                        ))
+                    }
+                </div>
+
+                <div className="poppins font-[500] text-[24px] pt-6 ">
+                    <button className="border-b-[3px] border-black pb-3">
+                        View More
+                    </button>
+                </div>
+            </div>
+
+            <div className="flex items-center justify-center p-0 m-0" style={{ backgroundColor: "#fff9ef" }}>
+                <div className="">
+                    <img className="w-[900px] h-[700px]" src="./Asgaard sofa 1.png" alt="" />
+                </div>
+                <div className="flex flex-col justify-center items-center p-0 m-0 w-[35%]">
+                    <div className="p-0 m-0 poppins font-[500] text-[24px]">
+                        <h1>
+                            New Arrivals
+                        </h1>
+                    </div>
+                    <div className="poppins font-[700] text-[48px]">
+                        <h2 className="">
+                            Asgaard Sofa
+                        </h2>
+                    </div>
+                    <div className="poppins font-[400] text-[20px] pt-6 ">
+                        <button className="border border-black py-3 px-16">
+                            Order Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div className="flex flex-col items-center justify-center min-h-screen py-16 bg-white w-full">
+                <div className="poppins font-[500] text-[36px] text-center">
+                    <h1>Our Blogs</h1>
+                </div>
+                <div className="poppins font-[500] text-[16px] pt-4 text-center" style={{ color: '#9f9f9f' }}>
+                    <p>
+                        Find a bright ideal to suit your taste with our great selection
+                    </p>
+                </div>
+                <div className="flex items-center justify-center pt-12 pb-3">
+
+                    <div className="flex items-center justify-evenly px-4 m-0 bg-white w-[395px] h-[555px]" >
+                        <div className="flex flex-col justify-center items-center p-0 m-0">
+                            <div className="px-0 pb-6">
+                                <img className="w-full h-full" src="./Rectangle 13.png" alt="" />
+                            </div>
+                            <div className="p-0 m-0 poppins font-[400] text-[20px] pb-2">
+                                <h2>
+                                    Going all-in with millennial design
+                                </h2>
+                            </div>
+                            <div className="poppins font-[500] text-[24px] pt-1 pb-3">
+                                <button className="border-b-[3px] border-black pb-2">
+                                    Read More
+                                </button>
+                            </div>
+                            <div className="flex items-center justify-evenly poppins font-[300] text-[16px] pt-1 p-0 m-0 w-3/4">
+                                <p className="">
+                                    <i className="fa-regular fa-clock"></i>&ensp;5 min
+                                </p>
+                                <p className="">
+                                    <i className="fa-regular fa-calendar-days"></i>&ensp;12<sup>th</sup> Oct 2024
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="flex items-center justify-evenly px-4 m-0 bg-white w-[395px] h-[555px] " >
+                        <div className="flex flex-col justify-center items-center p-0 m-0">
+                            <div className="px-0 pb-6">
+                                <img className="w-full h-full" src="./Rectangle 14.png" alt="" />
+                            </div>
+                            <div className="p-0 m-0 poppins font-[400] text-[20px] pb-2">
+                                <h2>
+                                    Going all-in with millennial design
+                                </h2>
+                            </div>
+                            <div className="poppins font-[500] text-[24px] pt-1 pb-3">
+                                <button className="border-b-[3px] border-black pb-2">
+                                    Read More
+                                </button>
+                            </div>
+                            <div className="flex items-center justify-evenly poppins font-[300] text-[16px] pt-1 p-0 m-0 w-3/4">
+                                <p className="">
+                                    <i className="fa-regular fa-clock"></i>&ensp;5 min
+                                </p>
+                                <p className="">
+                                    <i className="fa-regular fa-calendar-days"></i>&ensp;12<sup>th</sup> Oct 2024
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="flex items-center justify-evenly px-4 m-0 bg-white w-[395px] h-[555px] " >
+                        <div className="flex flex-col justify-center items-center p-0 m-0">
+                            <div className="px-0 pb-6">
+                                <img className="w-full h-full" src="./Rectangle 15.png" alt="" />
+                            </div>
+                            <div className="p-0 m-0 poppins font-[400] text-[20px] pb-2">
+                                <h2>
+                                    Going all-in with millennial design
+                                </h2>
+                            </div>
+                            <div className="poppins font-[500] text-[24px] pt-1 pb-3">
+                                <button className="border-b-[3px] border-black pb-2">
+                                    Read More
+                                </button>
+                            </div>
+                            <div className="flex items-center justify-evenly poppins font-[300] text-[16px] pt-1 p-0 m-0 w-3/4">
+                                <p className="">
+                                    <i className="fa-regular fa-clock"></i>&ensp;5 min
+                                </p>
+                                <p className="">
+                                    <i className="fa-regular fa-calendar-days"></i>&ensp;12<sup>th</sup> Oct 2024
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="poppins font-[500] text-[24px] pt-10 pb-3">
+                    <button className="border-b-[3px] border-black pb-3">
+                        View All Post
+                    </button>
+                </div>
+            </div>
+
+            <div className="relative flex items-center justify-center w-full h-[450px]">
+                <div className="absolute inset-0 -z-10">
+                    <img className="w-full h-full object-cover" src="./Rectangle 17.png" alt="Background" />
+                </div>
+
+                <div className="flex flex-col justify-center items-center p-0 m-0 w-[35%]">
+                    <div className="poppins font-[700] text-[60px] text-center">
+                        <h2>Our Instagram</h2>
+                    </div>
+                    <div className="p-0 m-0 poppins font-[400] text-[20px] text-center">
+                        <h1>Follow our store on Instagram</h1>
+                    </div>
+                    <div className="poppins font-[400] text-[20px] pt-6">
+                        <button
+                            className="border py-3 px-16 rounded-[100px] shadow-lg"
+                            style={{ backgroundColor: '#faf4f4' }}
+                        >
+                            Follow Us
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </>
+    )
 }
