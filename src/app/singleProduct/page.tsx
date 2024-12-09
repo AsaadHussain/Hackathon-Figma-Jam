@@ -1,3 +1,4 @@
+import Card from "../components/Card/page";
 
 export default function Shop() {
     return (
@@ -13,111 +14,181 @@ export default function Shop() {
                 </div>
             </div>
 
-            <div className="flex items-center justify-evenly w-full border-[1px] border-blue-500">
-                <div className="flex items-center justify-center">
-                    <div className="flex flex-col items-center justify-center">
-                        <div className="bg-[#fff9e5] py-1 px-0 m-0"><img src="./Outdoor sofa set 2.png" alt="" /></div>
-                        <div className="bg-[#fff9e5] py-1 px-0 m-0"><img src="./Outdoor sofa set_2 1.png" alt="" /></div>
-                        <div className="bg-[#fff9e5] py-1 px-0 m-0"><img src="./Stuart sofa 1.png" alt="" /></div>
-                        <div className="bg-[#fff9e5] py-1 px-0 m-0"><img src="./Maya sofa three seater (1) 1.png" alt="" /></div>
+            <div className="py-4 flex items-start justify-center w-full ">
+                <div className="flex items-start justify-center w-[43%] gap-4">
+                    <div className="flex flex-col items-center justify-center w-[20%] gap-4">
+                        <div className="flex items-center justify-center bg-[#fff9e5] py-4 px-1 m-0 rounded-lg"><img src="./Outdoor sofa set 2.png" alt="" /></div>
+                        <div className="flex items-center justify-center bg-[#fff9e5] py-4 px-1 m-0 rounded-lg"><img src="./Outdoor sofa set_2 1.png" alt="" /></div>
+                        <div className="flex items-center justify-center bg-[#fff9e5] py-2 px-1 m-0 rounded-lg"><img src="./Stuart sofa 1.png" alt="" /></div>
+                        <div className="flex items-center justify-center bg-[#fff9e5] py-4 px-1 m-0 rounded-lg"><img src="./Maya sofa three seater (1) 1.png" alt="" /></div>
                     </div>
                     <div>
-                        <div className="bg-[#fff9e5] py-1 px-0 m-0">
+                        <div className="flex items-center justify-center bg-[#fff9e5] py-1 px-0 m-0 w-[80%] h-[500px] rounded-lg">
                             <img src="./Asgaard sofa 1.png" alt="" />
                         </div>
                     </div>
                 </div>
-                <div className="flex flex-col items-center justify-start ">
+                <div className="gap-4 flex flex-col items-start justify-evenly min-h-screen w-[43%]">
                     <div>
                         <h1 className=" poppins font-[400] text-[42px]"> Asgaard sofa</h1>
                         <h3 className=" poppins font-[500] text-[24px] text-[#9f9f9f]"> Rs. 250,000.00</h3>
                     </div>
 
-                    <div className="w-full flex items-center justify-evenly">
-                        <div className="flex items-center justify-center text-[#ffda5b]">
+                    <div className="w-full flex items-center justify-start gap-5">
+                        <div className="gap-2 flex items-center justify-center text-[#ffda5b]">
                             <i className="fa-solid fa-star"></i>
                             <i className="fa-solid fa-star"></i>
                             <i className="fa-solid fa-star"></i>
                             <i className="fa-solid fa-star"></i>
                             <i className="fa-solid fa-star-half"></i>
                         </div>
-                        <div className="h-[40px] w-[1px] bg-gray-400"></div>
+                        <div className="h-[35px] w-[1.5px] bg-gray-400"></div>
                         <p className="text-[#9f9f9f] poppins text-[13px] font-[400]">5 Customer Review</p>
                     </div>
-                    <div className="text-[#000] poppins text-[13px] font-[400]">
+                    <div className="text-[#000] poppins text-[13px] font-[400] w-[72%]">
                         <p>
                             Setting the bar as one of the loudest speakers in its class,
                             the Kilburn is a compact, stout-hearted hero with a well-balanced
                             audio which boasts a clear midrange and extended highs for a sound.
                         </p>
                     </div>
-                    <div>
-                        <div>
-                            <p className=" poppins font-[400] text-[14px] text-[#9f9f9f]">Size</p>
-                            <div className="w-2/5 flex items-center justify-evenly poppins font-[400] text-[20px]" >
+                    <div className="w-full flex flex-col items-start justify-start">
+                        <div className="w-full flex flex-col items-start justify-start">
+                            <p className="pb-3 poppins font-[400] text-[14px] text-[#9f9f9f]">Size</p>
+                            <div className="pb-3 gap-4 w-full flex items-start justify-start poppins font-[400] text-[13px]" >
                                 <div>
-                                    <button className="px-[31.7px] py-[20px] rounded-[12px] bg-[#Faf4f4] hover:bg-[#fbebb5] active:bg-[#ffe788]">
+                                    <button className="px-[15px] py-2 rounded-[6px] bg-[#Faf4f4] hover:bg-[#fbebb5] active:bg-[#ffe788]">
                                         L
                                     </button>
                                 </div>
                                 <div>
-                                    <button className="px-[31.7px] py-[20px] rounded-[12px] bg-[#Faf4f4] hover:bg-[#fbebb5] active:bg-[#ffe788]">
+                                    <button className="px-[11px] py-2 rounded-[6px] bg-[#Faf4f4] hover:bg-[#fbebb5] active:bg-[#ffe788]">
                                         XL
                                     </button>
                                 </div>
                                 <div>
-                                    <button className="px-[31.7px] py-[20px] rounded-[12px] bg-[#Faf4f4] hover:bg-[#fbebb5] active:bg-[#ffe788]">
+                                    <button className="px-[10px] py-2 rounded-[6px] bg-[#Faf4f4] hover:bg-[#fbebb5] active:bg-[#ffe788]">
                                         XS
                                     </button>
                                 </div>
                             </div>
                         </div>
-                        <div>
-                            <p className=" poppins font-[400] text-[14px] text-[#9f9f9f]">Color</p>
-                            <div className="flex items-center justify-center">
-                                <i className="text-[#816dfa] fa-solid fa-circle"></i>
-                                <i className="text-[#000000] fa-solid fa-circle"></i>
-                                <i className=" text-[#cdba7b] fa-solid fa-circle"></i>
+                        <div className="w-full flex flex-col items-start justify-start">
+                            <p className="pb-3 poppins font-[400] text-[14px] text-[#9f9f9f]">Color</p>
+                            <div className="flex items-center justify-start gap-4">
+                                <i className="text-[38px] text-[#816dfa] fa-solid fa-circle"></i>
+                                <i className="text-[38px] text-[#000000] fa-solid fa-circle"></i>
+                                <i className="text-[38px] text-[#cdba7b] fa-solid fa-circle"></i>
                             </div>
                         </div>
                     </div>
-                    <div className="flex items-center justify-center w-[70%] p-0">
+                    <div className="py-4 flex items-center justify-start w-[70%] p-0">
                         <div className="
                         flex items-center justify-around border-[1px] border-[#9f9f9f]
-                        rounded-lg py-5 px-0 poppins font-[500] text-[16px] w-[22%]">
+                        rounded-lg py-[19px] px-1 poppins font-[500] text-[16px] w-[35%]">
                             <button>-</button>
                             <button>1</button>
                             <button>+</button>
                         </div>
 
                         <button className="flex items-center justify-around border-[1px]
-                         border-[#000000] rounded-[12px] py-4 px-1 ml-4 w-[40%] poppins font-[400]
+                         border-[#000000] rounded-[12px] py-[15px] px-[20px] ml-4 w-[60%] poppins font-[400]
                           text-[20px]">
                             Add To Cart
                         </button>
                     </div>
-                    <hr className="bg-[#d9d9d9] w-full h-[1.5px]" />
-                    <div className="flex items-center justify-center">
-                        <div className="flex flex-col items-center justify-around poppins font-[400]
+                    <hr className="my-8 bg-[#d9d9d9] w-full h-[1.5px]" />
+                    <div className="w-full flex items-end justify-start gap-6">
+                        <div className="w-[50%] flex flex-col items-start justify-center poppins font-[400]
                           text-[16px] text-[#9f9f9f]">
-                            <div className="flex items-center justify-center">
-                                <p className="">SKU</p>
-                                <p className="">:</p>
-                                <p className="">SS001</p>
+                            <div className="py-2 w-full  flex items-center justify-start">
+                                <p className="w-[30%]">SKU</p>
+                                <p className="w-[5%]">:</p>
+                                <p className="w-[60%]">SS001</p>
                             </div>
-                            <div className="flex items-center justify-center">
-                                <p className="">Category</p>
-                                <p className="">:</p>
-                                <p className="">Sofas</p>
+                            <div className="py-2 w-full  flex items-center justify-start">
+                                <p className="w-[30%]">Category</p>
+                                <p className="w-[5%]">:</p>
+                                <p className="w-[60%]">Sofas</p>
                             </div>
-                            <div className="flex items-center justify-center">
-                                <p className="">Tags</p>
-                                <p className="">:</p>
-                                <p className="">Sofa, Chair, Home, Shop</p>
+                            <div className="py-2 w-full  flex items-center justify-start">
+                                <p className="w-[30%]">Tags</p>
+                                <p className="w-[5%]">:</p>
+                                <p className="w-[65%]">Sofa, Chair, Home, Shop</p>
+                            </div>
+                            <div className="py-2 w-full  flex items-center justify-start">
+                                <p className="w-[30%]">Share</p>
+                                <p className="w-[5%]">:</p>
+                                <p className="w-[6%] text-black flex gap-6"><i className="fa-brands fa-facebook"></i>
+                                    <i className="fa-brands fa-linkedin"></i>
+                                    <i className="fa-brands fa-twitter"></i></p>
                             </div>
                         </div>
-                        <div><i className="text-red-500 fa-regular fa-heart"></i></div>
+                        <div><i className="text-2xl text-red-500 fa-regular fa-heart"></i></div>
                     </div>
+                </div>
+            </div>
+
+            <hr className="my-8 bg-[#d9d9d9] w-full h-[1.5px]" />
+
+            <div className=" font-[400] text-[24px] poppins flex flex-col items-center justify-evenly py-0 m-0 bg-white" >
+                <div className="flex justify-center items-center py-6 m-0 gap-20">
+                    <div className="p-0 m-0 poppins text-black">
+                        <h1>
+                            Description
+                        </h1>
+                    </div>
+                    <div className="p-0 m-0 text-[#9f9f9f]">
+                        <h1>
+                            Additional Information
+                        </h1>
+                    </div>
+                    <div className="p-0 m-0 text-[#9f9f9f]">
+                        <h1>
+                            Reviews [5]
+                        </h1>
+                    </div>
+                </div>
+                <div className="text-justify flex flex-col gap-8 w-3/4 py-6 m-0 poppins text-[#9f9f9f] font-[400] text-[16px] ">
+                    <p>Embodying the raw, wayward spirit of rock ‘n’ roll, the Kilburn portable active
+                        stereo speaker takes the unmistakable look and sound of Marshall, unplugs the chords,
+                        and takes the show on the road.</p>
+                    <p>Weighing in under 7 pounds, the Kilburn is a lightweight piece of vintage styled
+                        engineering. Setting the bar as one of the loudest speakers in its class, the
+                        Kilburn is a compact, stout-hearted hero with a well-balanced audio which boasts
+                        a clear midrange and extended highs for a sound that is both articulate and
+                        pronounced. The analogue knobs allow you to fine tune the controls to your
+                        personal preferences while the guitar-influenced leather strap enables easy
+                        and stylish travel.</p>
+                </div>
+
+                <div className="flex justify-end items-center py-3 m-0 gap-8">
+                    <div className="bg-[#fff9ef] py-20 px-4">
+                        <img className="w-[560px] h-[170px]" src="./Cloud sofa three seater + ottoman_2 1.png" alt="" />
+                    </div>
+                    <div className="bg-[#fff9ef] py-20 px-4">
+                        <img className="w-[560px] h-[170px]" src="./Cloud sofa three seater + ottoman_1 1.png" alt="" />
+                    </div>
+                </div>
+            </div>
+
+            <hr className="my-14 bg-[#d9d9d9] w-full h-[1.5px]" />
+
+            <div className="flex flex-col items-center justify-center min-h-screen py-2 bg-white w-full">
+                <div className="poppins font-[500] text-[36px] text-center">
+                    <h1>Related Products</h1>
+                </div>
+                <div className="flex items-center justify-center pt-24 pb-3">
+                    {
+                        Array(4).fill().map((_, index) => (
+                            <Card key={index} />
+                        ))
+                    }
+                </div>
+                <div className="poppins font-[500] text-[24px] py-10 ">
+                    <button className="border-b-[3px] border-black pb-4">
+                        View More
+                    </button>
                 </div>
             </div>
         </>
