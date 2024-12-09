@@ -2,7 +2,7 @@
 export default function Footer() {
     return (
         <>
-            <div className="flex flex-col justify-between items-center pt-12 pb-10 h-16 bg-white w-full" >
+            <div className="flex flex-col justify-between items-center pt-24 pb-10 h-16 bg-white w-full" >
 
                 <div className="flex justify-evenly items-center w-11/12">
 
