@@ -47,7 +47,7 @@ export default function Home() {
 
                 <div className="flex-col justify-end items-center p-0 m-0">
                     <div className="px-4 py-2">
-                        <img className="w-[400px] h-[290px]" src="./Cloud sofa three seater + ottoman_3 1.png" alt="" />
+                        <img className="w-[400px] h-[290px]" src="./Cloud Sofa.png" alt="" />
                     </div>
                     <div className="p-0 m-0 poppins font-[500] text-[36px]">
                         <h1>

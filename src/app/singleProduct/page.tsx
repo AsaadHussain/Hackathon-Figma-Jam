@@ -184,10 +184,10 @@ export default function Shop() {
 
                 <div className="flex justify-end items-center py-3 m-0 gap-8">
                     <div className="bg-[#fff9ef] py-20 px-4">
-                        <img className="w-[560px] h-[170px]" src="./Cloud sofa three seater + ottoman_2 1.png" alt="" />
+                        <img className="w-[560px] h-[170px]" src="./Cloud sofa1.png" alt="" />
                     </div>
                     <div className="bg-[#fff9ef] py-20 px-4">
-                        <img className="w-[560px] h-[170px]" src="./Cloud sofa three seater + ottoman_1 1.png" alt="" />
+                        <img className="w-[560px] h-[170px]" src="./Cloud sofa 11.png" alt="" />
                     </div>
                 </div>
             </div>
