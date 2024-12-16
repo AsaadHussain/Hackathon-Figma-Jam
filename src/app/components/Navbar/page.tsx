@@ -4,11 +4,11 @@
 import Link from "next/link"
 import styles from '@/app/header.module.css';
 
-type home = {
-    isHome: boolean
+type NavbarProps = {
+    isHome?: boolean
 }
 
-export default function Navbar({isHome}:home) {
+export default function Navbar({isHome=false}:NavbarProps) {
 
 
     return (
