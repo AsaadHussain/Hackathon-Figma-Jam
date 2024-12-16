@@ -1,7 +1,13 @@
+"use client"
+import Navbar from "../components/Navbar/page"
+
+
 
 export default function Contact() {
     return (
         <>
+            <Navbar isHome={false} />
+
             <div className="relative flex items-center justify-center w-full h-[315px]">
                 <div className="absolute inset-0 -z-10">
                     <img className="w-full h-full object-cover" src="./Rectangle 1.png" alt="Background" />
@@ -20,82 +26,76 @@ export default function Contact() {
                 </div>
             </div>
 
-            <div className="flex flex-col justify-center items-center m-0 w-full poppins">
-                <div className=" flex flex-col items-center justify-center py-28 bg-white w-1/2">
-                    <div className="poppins font-[500] text-[36px] text-center">
-                        <h1>Get In Touch With Us</h1>
-                    </div>
-                    <div className="poppins font-[500] text-[16px] pt-4 text-center" style={{ color: '#9f9f9f' }}>
-                        <p>
-                            For More Information About Our Product & Services. Please Feel Free To Drop Us An Email. Our Staff Always Be There To Help You Out. Do Not Hesitate!
-                        </p>
-                    </div>
+            <div className=" flex flex-col items-center justify-center py-28 bg-white w-full">
+                <div className="w-2/3 poppins font-[600] text-[36px] text-center">
+                    <h1>Get In Touch With Us</h1>
                 </div>
+                <div className="w-[48%] poppins font-[400] text-[16px] p-2 text-center text-[#9f9f9f]" >
+                    <p>
+                        For More Information About Our Product & Services. Please Feel Free To Drop Us An Email. Our Staff Always Be There To Help You Out. Do Not Hesitate!
+                    </p>
+                </div>
+            </div>
 
-                <div className="w-full flex items-center justify-center">
-                    <div className="poppins flex flex-col justify-center items-start p-0 m-0 w-[45%] gap-6">
-                        <div className=" flex justify-between items-start py-2 m-0 w-full">
-                            <div className="flex flex-col justify-center items-start p-0 m-0 gap-4">
-                                <h3 className="font-[500] text-[24px] py-2">Product</h3>
-                                <p className="text-[#9f9f9f] font-[400] text-[16px]">Asgaard sofa&ensp;<span className="font-[500] text-[12px] text-black">&emsp;X&emsp;1</span></p>
-                                <p className="font-[400] text-[16px]">Subtotal</p>
-                                <p className="font-[400] text-[16px]">Total</p>
-                            </div>
-                            <div className="flex flex-col justify-center items-end p-0 m-0 gap-4">
-                                <h3 className="font-[500] text-[24px] py-2">Subtotal</h3>
-                                <p className="font-[300] text-[16px]">Rs. 250,000.00</p>
-                                <p className="font-[300] text-[16px]">Rs. 250,000.00</p>
-                                <p className="text-[#b88e2f] font-[700] text-[24px]">Rs. 250,000.00</p>
-                            </div>
+            <div className="py-2 w-full flex items-start justify-center">
+                <div className="poppins flex flex-col justify-center items-start py-2 m-0 gap-10">
+                    <div className="flex items-start justify-center gap-7">
+                        <div className="text-[24px]">
+                            <i className="fa-solid fa-location-dot"></i>
                         </div>
-                        <hr className="my-1 bg-[#d9d9d9] w-full h-[1.5px]" />
-                        <div className="poppins">
-                            <div className=" my-0 pb-6">
-                                <div className="pb-4 gap-4 flex items-center justify-start font-[400] text-[16px]">
-                                    <input type="radio" />
-                                    <p>Direct Bank Transfer</p>
-                                </div>
-                                <p className="text-[#9f9f9f] font-[300] text-[16px] text-justify">
-                                    Make your payment directly into our bank account. Please use your
-                                    Order ID as the payment reference. Your order will not be shipped
-                                    until the funds have cleared in our account.
-                                </p>
-                            </div>
-                            <div className="text-[#9f9f9f] font-[500] text-[16px] pb-4 gap-4 flex items-center justify-start">
-                                <input type="radio" />
-                                <p>Direct Bank Transfer</p>
-                            </div>
-                            <div className="text-[#9f9f9f] font-[500] text-[16px] pb-2 gap-4 flex items-center justify-start">
-                                <input type="radio" />
-                                <p>Cash On Delivery </p>
-                            </div>
-                        </div>
-                        <div className="p-0 m-0">
-                            <p className="text-[#000] font-[300] text-[16px] text-justify p-0 m-0">
-                                Your personal data will be used to support your experience throughout
-                                this website, to manage access to your account, and for other purposes
-                                described in our <button className="font-[600] text-[16px]">privacy policy</button> .
+                        <div>
+                            <h3 className="text-[24px] font-[500]">
+                                Address
+                            </h3>
+                            <p className="w-1/2 text-[16px] font-[400]">
+                                236 5th SE Avenue, New York NY10000, United States
                             </p>
                         </div>
-                        <div className="py-4 flex items-center justify-center w-full">
-                            <button className="border-[1px]
-                         border-[#000000] rounded-[12px] py-[15px] px-[90px] mt-[6px] poppins font-[400]
-                          text-[20px]">
-                                Place order
-                            </button>
+                    </div>
+                    <div className="flex items-start justify-center gap-7">
+                        <div className="text-[24px]">
+                            <i className="fa-solid fa-phone"></i>
+                        </div>
+                        <div>
+                            <h3 className="text-[24px] font-[500]">
+                                Phone
+                            </h3>
+                            <p className="text-[16px] font-[400]">
+                                Mobile: +(84) 546-6789
+                            </p>
+                            <p className="text-[16px] font-[400]">
+                                Hotline: +(84) 456-6789
+                            </p>
                         </div>
                     </div>
-
-                    <div className="flex flex-col justify-center items-start p-0 m-0 w-[55%] gap-12">
+                    <div className="flex items-start justify-center gap-7">
+                        <div className="text-[24px]">
+                            <i className="fa-solid fa-clock"></i>
+                        </div>
+                        <div>
+                            <h3 className="text-[24px] font-[500]">
+                                Working Time
+                            </h3>
+                            <p className="w-2/3 text-[16px] font-[400]">
+                                Monday-Friday: 9:00 - 22:00
+                            </p>
+                            <p className="w-2/3 text-[16px] font-[400]">
+                                Saturday-Sunday: 9:00 - 21:00
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div className="poppins flex flex-col justify-center items-start p-0 m-0 gap-12">
                         <div className="font-[500] text-[16px]">
                             <p className="pb-6">
                                 Your name
                             </p>
-                            <div className="font-[500] text-[16px] h-[75px] w-[450px] border-[2px] border-[#9f9f9f] rounded-xl">
+                            <div className="font-[400] text-[16px] h-[75px] w-[450px] border-[2px] border-[#9f9f9f] rounded-xl">
                                 <input
                                     type="text"
                                     placeholder="Abc"
-                                    className="w-full h-full p-4 rounded-xl outline-none"
+                                    className="w-full h-full py-4 px-6 rounded-xl outline-none"
                                 />
                             </div>
                         </div>
@@ -103,11 +103,11 @@ export default function Contact() {
                             <p className="pb-6">
                                 Email address
                             </p>
-                            <div className="font-[500] text-[16px] h-[75px] w-[450px] border-[2px] border-[#9f9f9f] rounded-xl">
+                            <div className="font-[400] text-[16px] h-[75px] w-[450px] border-[2px] border-[#9f9f9f] rounded-xl">
                                 <input
                                     type="text"
                                     placeholder="Abc@def.com"
-                                    className="w-full h-full p-4 rounded-xl outline-none"
+                                    className="w-full h-full py-4 px-6 rounded-xl outline-none"
                                 />
                             </div>
                         </div>
@@ -115,11 +115,11 @@ export default function Contact() {
                             <p className="pb-6">
                                 Subject
                             </p>
-                            <div className="font-[500] text-[16px] h-[75px] w-[450px] border-[2px] border-[#9f9f9f] rounded-xl">
+                            <div className="font-[400] text-[16px] h-[75px] w-[450px] border-[2px] border-[#9f9f9f] rounded-xl">
                                 <input
                                     type="text"
                                     placeholder="This is an optional"
-                                    className="w-full h-full p-4 rounded-xl outline-none"
+                                    className="w-full h-full py-4 px-6 rounded-xl outline-none"
                                 />
                             </div>
                         </div>
@@ -127,12 +127,19 @@ export default function Contact() {
                             <p className="pb-6">
                                 Message
                             </p>
-                            <div className="font-[500] text-[16px] h-[75px] w-[450px] border-[2px] border-[#9f9f9f] rounded-xl">
+                            <div className="font-[400] text-[16px] h-[135px] w-[450px] border-[2px] border-[#9f9f9f] rounded-xl">
                                 <textarea
-                                    placeholder=""
-                                    className="w-full h-full p-4 rounded-xl outline-none"
+                                    placeholder="Hi! i&apos;d like to ask about"
+                                    className="w-full h-full p-6 rounded-xl outline-none"
                                 />
                             </div>
+                        </div>
+                        <div className="pb-16 pt-0 flex items-center justify-start w-full">
+                            <button className="border-[1px]
+                         border-[#000000] rounded-[12px] py-[12px] px-[90px] mt-[4px] poppins font-[400]
+                          text-[16px]">
+                                Submit
+                            </button>
                         </div>
                     </div>
                 </div>

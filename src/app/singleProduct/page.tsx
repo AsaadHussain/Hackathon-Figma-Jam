@@ -2,12 +2,15 @@
 import { useState } from "react";
 import Card from "../components/Card/page";
 import Modal from "../components/Modal";
+import Navbar from "../components/Navbar/page";
 
 export default function Shop() {
 
     const [showModal, setShowModal] = useState(false);
     return (
         <>
+            <Navbar isHome={false} />
+
             <div className="bg-white flex items-center justify-start w-full h-[110px]">
                 <div className="mx-24 py-4 w-[25%] flex items-center justify-between poppins font-[400] text-[16px]">
                     <h3 className="text-[#9f9f9f]">Home</h3>
@@ -196,7 +199,7 @@ export default function Shop() {
                     </button>
                 </div>
             </div>
-            <Modal isVisible={showModal} onClose={()=>setShowModal(!showModal)}/>
+            <Modal isVisible={showModal} onClose={() => setShowModal(!showModal)} />
         </>
     )
 }

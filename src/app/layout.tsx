@@ -1,3 +1,4 @@
+
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { Poppins } from "next/font/google";
@@ -27,6 +28,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
   return (
     <html lang="en">
       <head>
@@ -35,7 +37,6 @@ export default function RootLayout({
       <body
         className={`${pops.variable} ${geistMono.variable} antialiased`}
       >
-        <Navbar />
         {children}
         <Footer />
       </body>

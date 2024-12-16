@@ -1,9 +1,13 @@
+"use client" 
+
 import Card from "@/app/components/Card/page";
+import Link from "next/link";
+import Navbar from "./components/Navbar/page";
 
 export default function Home() {
     return (
         <>
-        
+        <Navbar isHome={true}/>
             <div className="flex items-center justify-center p-0 m-0" style={{ backgroundColor: "#fbebb5" }}>
                 <div className="flex-col justify-end items-center p-0 m-0 w-[35%]">
                     <div className="p-0 m-0 poppins font-[500] text-[64px]">
@@ -38,7 +42,7 @@ export default function Home() {
                         </button>
                     </div>
                 </div>
-                
+
                 <div className="flex-col justify-end items-center p-0 m-0">
                     <div className="px-4 py-2">
                         <img className="w-[400px] h-[290px]" src="./Cloud sofa three seater + ottoman_3 1.png" alt="" />
@@ -125,9 +129,11 @@ export default function Home() {
                                 </h2>
                             </div>
                             <div className="poppins font-[500] text-[24px] pt-1 pb-3">
-                                <button className="border-b-[3px] border-black pb-2">
-                                    Read More
-                                </button>
+                                <Link href='/blog'>
+                                    <button className="border-b-[3px] border-black pb-2">
+                                        Read More
+                                    </button>
+                                </Link>
                             </div>
                             <div className="flex items-center justify-evenly poppins font-[300] text-[16px] pt-1 p-0 m-0 w-3/4">
                                 <p className="">
@@ -151,9 +157,11 @@ export default function Home() {
                                 </h2>
                             </div>
                             <div className="poppins font-[500] text-[24px] pt-1 pb-3">
-                                <button className="border-b-[3px] border-black pb-2">
-                                    Read More
-                                </button>
+                                <Link href='/blog'>
+                                    <button className="border-b-[3px] border-black pb-2">
+                                        Read More
+                                    </button>
+                                </Link>
                             </div>
                             <div className="flex items-center justify-evenly poppins font-[300] text-[16px] pt-1 p-0 m-0 w-3/4">
                                 <p className="">
@@ -177,9 +185,11 @@ export default function Home() {
                                 </h2>
                             </div>
                             <div className="poppins font-[500] text-[24px] pt-1 pb-3">
-                                <button className="border-b-[3px] border-black pb-2">
-                                    Read More
-                                </button>
+                                <Link href='/blog'>
+                                    <button className="border-b-[3px] border-black pb-2">
+                                        Read More
+                                    </button>
+                                </Link>
                             </div>
                             <div className="flex items-center justify-evenly poppins font-[300] text-[16px] pt-1 p-0 m-0 w-3/4">
                                 <p className="">
@@ -193,9 +203,11 @@ export default function Home() {
                     </div>
                 </div>
                 <div className="poppins font-[500] text-[24px] pt-10 pb-3">
-                    <button className="border-b-[3px] border-black pb-3">
-                        View All Post
-                    </button>
+                    <Link href='/blog'>
+                        <button className="border-b-[3px] border-black pb-4">
+                            View All Post
+                        </button>
+                    </Link>
                 </div>
             </div>
 

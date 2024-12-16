@@ -1,6 +1,11 @@
+"use client"
+
+import Navbar from "../components/Navbar/page"
+
 export default function Account() {
     return (
         <>
+            <Navbar isHome={false} />
             <div className="relative flex items-center justify-center w-full h-[315px]">
                 <div className="absolute inset-0 -z-10">
                     <img className="w-full h-full object-cover" src="./Rectangle 1.png" alt="Background" />

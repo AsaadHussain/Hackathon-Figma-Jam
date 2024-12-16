@@ -1,7 +1,12 @@
+"use client"
+
+import Link from "next/link"
+import Navbar from "../components/Navbar/page"
 
 export default function Cart() {
     return (
         <>
+            <Navbar isHome={false} />
             <div className="relative flex items-center justify-center w-full h-[315px]">
                 <div className="absolute inset-0 -z-10">
                     <img className="w-full h-full object-cover" src="./Rectangle 1.png" alt="Background" />
@@ -48,11 +53,11 @@ export default function Cart() {
                         </tbody>
                     </table>
                 </div>
-                <div  className="h-[400px] flex flex-col items-center justify-between poppins bg-[#fff9ef] px-16 py-2">
+                <div className="h-[400px] flex flex-col items-center justify-between poppins bg-[#fff9ef] px-16 py-2">
                     <div className="py-2 text-[32px] font-[600]">
                         <h3>Cart Totals</h3>
                     </div>
-                    <div  className="py-3 w-full flex flex-col items-center justify-center">
+                    <div className="py-3 w-full flex flex-col items-center justify-center">
                         <div className="py-2 w-full flex items-center justify-between">
                             <p className="text-[16px] font-[500]">Subtotal</p>
                             <p className="text-[#9f9f9f] text-[16px] font-[400]">Rs. 250,000.00</p>
@@ -63,11 +68,12 @@ export default function Cart() {
                         </div>
                     </div>
                     <div className="pb-16 pt-0 flex items-center justify-center w-full">
-                        <button className="border-[1px]
+                        <Link href="/checkout"><button className="border-[1px]
                          border-[#000000] rounded-[12px] py-[15px] px-[62px] mt-[5px] poppins font-[400]
                           text-[20px]">
                             Check Out
                         </button>
+                        </Link>
                     </div>
                 </div>
             </div>
