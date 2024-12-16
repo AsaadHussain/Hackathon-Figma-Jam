@@ -1,4 +1,7 @@
-"use client" 
+"use client"
+import Link from "next/link"
+
+
 
 export default function Footer() {
     return (
@@ -20,18 +23,18 @@ export default function Footer() {
                         <div className="poppins font-[500] text-[16px] flex flex-col justify-center items-start">
                             <h3 className="pb-10" style={{ color: '#9f9f9f' }}>Links</h3>
                             <ul className=" flex flex-col font-[500] text-[16px] text-black">
-                                <li className="pb-8 hover:text-gray-300 cursor-pointer">Home</li>
-                                <li className="pb-8 hover:text-gray-300 cursor-pointer">Shop</li>
-                                <li className="pb-8 hover:text-gray-300 cursor-pointer">About</li>
-                                <li className="pb-8 hover:text-gray-300 cursor-pointer">Contact</li>
+                                <li className="pb-8 hover:text-gray-300 cursor-pointer"><Link href="/">Home</Link></li>
+                                <li className="pb-8 hover:text-gray-300 cursor-pointer"><Link href="/shop">Shop</Link></li>
+                                <li className="pb-8 hover:text-gray-300 cursor-pointer"><Link href="/blog">About</Link></li>
+                                <li className="pb-8 hover:text-gray-300 cursor-pointer"><Link href="/contact">Contact</Link></li>
                             </ul>
                         </div>
                         <div className="font-[500] text-[16px] poppins flex flex-col justify-center items-start">
                             <h3 className="pb-10" style={{ color: '#9f9f9f' }}>Help</h3>
                             <ul className="flex flex-col justify-end text-black">
-                                <li className="pb-8 hover:text-gray-300 cursor-pointer">Payment Options</li>
-                                <li className="pb-8 hover:text-gray-300 cursor-pointer">Returns</li>
-                                <li className="pb-8 hover:text-gray-300 cursor-pointer">Privacy Policy</li>
+                                <li className="pb-8 hover:text-gray-300 cursor-pointer"><Link href="/">Payment Options</Link></li>
+                                <li className="pb-8 hover:text-gray-300 cursor-pointer"><Link href="/">Returns</Link></li>
+                                <li className="pb-8 hover:text-gray-300 cursor-pointer"><Link href="/">Privacy Policy</Link></li>
                             </ul>
                         </div>
                         <div className="poppins flex flex-col justify-center items-start">

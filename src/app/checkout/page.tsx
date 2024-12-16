@@ -1,4 +1,5 @@
 "use client"
+import Link from "next/link"
 import Navbar from "../components/Navbar/page"
 
 
@@ -249,11 +250,11 @@ export default function Checkout() {
                         </p>
                     </div>
                     <div className="py-4 flex items-center justify-center w-full">
-                        <button className="border-[1px]
+                        <Link href="/"><button className="border-[1px]
                          border-[#000000] rounded-[12px] py-[15px] px-[90px] mt-[6px] poppins font-[400]
                           text-[20px]">
                             Place order
-                        </button>
+                        </button></Link>
                     </div>
                 </div>
             </div>

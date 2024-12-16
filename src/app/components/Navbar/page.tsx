@@ -19,7 +19,7 @@ export default function Navbar({isHome}:home) {
                     <ul className="poppins flex space-x-14 font-[500] text-[16px] text-black">
                         <li className="px-2 py-1 hover:text-gray-300 cursor-pointer"><Link href="/">Home</Link></li>
                         <li className="px-2 py-1 hover:text-gray-300 cursor-pointer"><Link href="/shop">Shop</Link></li>
-                        <li className="px-2 py-1 hover:text-gray-300 cursor-pointer"><Link href="/about">About</Link></li>
+                        <li className="px-2 py-1 hover:text-gray-300 cursor-pointer"><Link href="/blog">About</Link></li>
                         <li className="px-2 py-1 hover:text-gray-300 cursor-pointer"><Link href='/contact'>Contact</Link></li>
                     </ul>
                 </div>

@@ -1,4 +1,4 @@
-"use client" 
+"use client"
 
 import Card from "@/app/components/Card/page";
 import Link from "next/link";
@@ -7,7 +7,7 @@ import Navbar from "./components/Navbar/page";
 export default function Home() {
     return (
         <>
-        <Navbar isHome={true}/>
+            <Navbar isHome={true} />
             <div className="flex items-center justify-center p-0 m-0" style={{ backgroundColor: "#fbebb5" }}>
                 <div className="flex-col justify-end items-center p-0 m-0 w-[35%]">
                     <div className="p-0 m-0 poppins font-[500] text-[64px]">
@@ -16,9 +16,9 @@ export default function Home() {
                         </h1>
                     </div>
                     <div className="poppins font-[500] text-[24px] pt-10">
-                        <button className="border-b-[3px] border-black pb-2">
+                        <Link href='/shop'><button className="border-b-[3px] border-black pb-2">
                             Shop Now
-                        </button>
+                        </button></Link>
                     </div>
                 </div>
                 <div className="">
@@ -37,9 +37,11 @@ export default function Home() {
                         </h1>
                     </div>
                     <div className="poppins font-[500] text-[24px] pt-6">
-                        <button className="border-b-[3px] border-black pb-2">
-                            View More
-                        </button>
+                        <Link href='/singleProduct'>
+                            <button className="border-b-[3px] border-black pb-2">
+                                View More
+                            </button>
+                        </Link>
                     </div>
                 </div>
 
@@ -53,9 +55,11 @@ export default function Home() {
                         </h1>
                     </div>
                     <div className="poppins font-[500] text-[24px] pt-6">
-                        <button className="border-b-[3px] border-black pb-2">
-                            View More
-                        </button>
+                        <Link href='/singleProduct'>
+                            <button className="border-b-[3px] border-black pb-2">
+                                View More
+                            </button>
+                        </Link>
                     </div>
                 </div>
             </div>
@@ -78,9 +82,11 @@ export default function Home() {
                 </div>
 
                 <div className="poppins font-[500] text-[24px] pt-6 ">
-                    <button className="border-b-[3px] border-black pb-3">
-                        View More
-                    </button>
+                    <Link href='/shop'>
+                        <button className="border-b-[3px] border-black pb-3">
+                            View More
+                        </button>
+                    </Link>
                 </div>
             </div>
 
@@ -100,9 +106,11 @@ export default function Home() {
                         </h2>
                     </div>
                     <div className="poppins font-[400] text-[20px] pt-6 ">
-                        <button className="border border-black py-3 px-16">
-                            Order Now
-                        </button>
+                        <Link href="/cart">
+                            <button className="border border-black py-3 px-16">
+                                Order Now
+                            </button>
+                        </Link>
                     </div>
                 </div>
             </div>
@@ -224,12 +232,14 @@ export default function Home() {
                         <h1>Follow our store on Instagram</h1>
                     </div>
                     <div className="poppins font-[400] text-[20px] pt-6">
-                        <button
-                            className="border py-3 px-16 rounded-[100px] shadow-lg"
-                            style={{ backgroundColor: '#faf4f4' }}
-                        >
-                            Follow Us
-                        </button>
+                        <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+                            <button
+                                className="border py-3 px-16 rounded-[100px] shadow-xl"
+                                style={{ backgroundColor: '#faf4f4' }}
+                            >
+                                Follow Us
+                            </button>
+                        </a>
                     </div>
                 </div>
             </div>

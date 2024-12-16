@@ -3,10 +3,22 @@ import { useState } from "react";
 import Card from "../components/Card/page";
 import Modal from "../components/Modal";
 import Navbar from "../components/Navbar/page";
+import Link from "next/link";
+
 
 export default function Shop() {
 
     const [showModal, setShowModal] = useState(false);
+    const [count, setCount] = useState(0);
+
+    const AddCount = () => {
+        setCount(count + 1);
+    }
+    const SubCount = () => {
+        setCount(count - 1);
+    }
+    
+
     return (
         <>
             <Navbar isHome={false} />
@@ -94,9 +106,9 @@ export default function Shop() {
                         <div className="
                         flex items-center justify-around border-[1px] border-[#9f9f9f]
                         rounded-lg py-[19px] px-1 poppins font-[500] text-[16px] w-[35%]">
-                            <button>-</button>
-                            <button>1</button>
-                            <button>+</button>
+                            <button onClick={SubCount}>-</button>
+                            <button>{count}</button>
+                            <button onClick={AddCount}>+</button>
                         </div>
 
                         <button className="flex items-center justify-around border-[1px]
@@ -194,9 +206,11 @@ export default function Shop() {
                     }
                 </div>
                 <div className="poppins font-[500] text-[24px] py-10 ">
+                    <Link href="/shop">
                     <button className="border-b-[3px] border-black pb-4">
                         View More
                     </button>
+                    </Link>
                 </div>
             </div>
             <Modal isVisible={showModal} onClose={() => setShowModal(!showModal)} />

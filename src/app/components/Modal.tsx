@@ -10,8 +10,8 @@ type ModalProps = {
 
 export default function Modal({ isVisible, onClose }: ModalProps) {
 
-  const handleClose = (e: any) => {
-    if (e.target.id === 'wrapper') onClose();
+  const handleClose = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (e.target instanceof HTMLElement && e.target.id === 'wrapper') onClose();
   }
 
   if (!isVisible) return null;

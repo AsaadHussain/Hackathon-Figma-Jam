@@ -3,7 +3,6 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { Poppins } from "next/font/google";
 import "./globals.css";
-import Navbar from "./components/Navbar/page";
 import Footer from "./components/Footer/page";
 
 const pops = Poppins({
