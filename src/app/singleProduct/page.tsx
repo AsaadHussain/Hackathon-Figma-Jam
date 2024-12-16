@@ -1,6 +1,11 @@
+'use client'
+import { useState } from "react";
 import Card from "../components/Card/page";
+import Modal from "../components/Modal";
 
 export default function Shop() {
+
+    const [showModal, setShowModal] = useState(false);
     return (
         <>
             <div className="bg-white flex items-center justify-start w-full h-[110px]">
@@ -93,7 +98,7 @@ export default function Shop() {
 
                         <button className="flex items-center justify-around border-[1px]
                          border-[#000000] rounded-[12px] py-[15px] px-[20px] ml-4 w-[60%] poppins font-[400]
-                          text-[20px]">
+                          text-[20px]" onClick={() => setShowModal(true)}>
                             Add To Cart
                         </button>
                     </div>
@@ -191,6 +196,7 @@ export default function Shop() {
                     </button>
                 </div>
             </div>
+            <Modal isVisible={showModal} onClose={()=>setShowModal(!showModal)}/>
         </>
     )
 }
