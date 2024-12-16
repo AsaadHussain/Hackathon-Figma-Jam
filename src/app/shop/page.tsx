@@ -1,7 +1,7 @@
 "use client"
 
 import Card from "../components/Card/page";
-import Navbar from "../components/Navbar/page";
+import Navbar from "../components/Navbar";
 
 export default function Shop() {
     return (

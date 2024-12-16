@@ -2,7 +2,7 @@
 
 import Card from "@/app/components/Card/page";
 import Link from "next/link";
-import Navbar from "./components/Navbar/page";
+import Navbar from "./components/Navbar";
 
 export default function Home() {
     return (

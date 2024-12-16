@@ -2,7 +2,7 @@
 import { useState } from "react";
 import Card from "../components/Card/page";
 import Modal from "../components/Modal";
-import Navbar from "../components/Navbar/page";
+import Navbar from "../components/Navbar";
 import Link from "next/link";
 
 
