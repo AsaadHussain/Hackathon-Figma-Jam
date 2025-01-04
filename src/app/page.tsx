@@ -1,10 +1,16 @@
 "use client"
 
+import React from "react";
 import Card from "@/app/components/Card/page";
 import Link from "next/link";
 import Navbar from "./components/Navbar";
+import { products } from "@/data/products";
 
 export default function Home() {
+
+    const firtProducts = products.slice(0, 4);
+    console.log(firtProducts);
+
     return (
         <>
             <Navbar isHome={true} />
@@ -75,8 +81,8 @@ export default function Home() {
                 </div>
                 <div className="flex items-center justify-center pt-24 pb-3">
                     {
-                        Array(4).fill(null).map((_, index) => (
-                            <Card key={index} />
+                        firtProducts.map((product) => (
+                            <Card key={product.sku} product={product}/>
                         ))
                     }
                 </div>
