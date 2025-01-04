@@ -1,15 +1,34 @@
 "use client"
 
-import React from "react";
 import Card from "@/app/components/Card/page";
 import Link from "next/link";
 import Navbar from "./components/Navbar";
-import { products } from "@/data/products";
+import { useEffect, useState } from "react";
+import { Product } from "@/data/products";
 
 export default function Home() {
 
-    const firtProducts = products.slice(0, 4);
-    console.log(firtProducts);
+    const [products, setProducts] = useState<Product[]>([])
+    const [loading, setLoading] = useState(true)
+
+    useEffect(() => {
+        const fetchProducts = async () => {
+            try {
+                const response = await fetch("http://localhost:3000/api/product")
+                const data = await response.json();
+                setProducts(data);
+            } catch (error) {
+                console.error("Failed to fetch products: ", error)
+            } finally {
+                setLoading(false);
+            }
+        }
+        fetchProducts()
+    }, []);
+
+    if(loading){
+        return <div>Loading...</div>
+    }
 
     return (
         <>
@@ -79,9 +98,9 @@ export default function Home() {
                         Find a bright ideal to suit your taste with our great selection of suspension, floor and table lights.
                     </p>
                 </div>
-                <div className="flex items-center justify-center pt-24 pb-3">
+                <div className="flex items-center justify-center pt-24 pb-3 gap-2">
                     {
-                        firtProducts.map((product) => (
+                        products.slice(0, 4).map((product) => (
                             <Card key={product.sku} product={product}/>
                         ))
                     }

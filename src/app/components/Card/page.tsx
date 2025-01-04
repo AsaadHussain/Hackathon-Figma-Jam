@@ -13,9 +13,9 @@ export default function Card({ product }: cardProp) {
             <div
                 key={product.sku}
                 className="flex items-center justify-evenly p-0 m-0 bg-white w-[285px] h-[375px] " >
-                <div className="flex-col justify-end items-center p-0 m-0">
-                    <div className="px-10 pb-12">
-                        <Link href="/singleProduct"><img className="object-cover w-[285px] h-[200px]" src={product.image} alt="" /></Link>
+                <div className="flex flex-col justify-end items-start p-0 m-0">
+                    <div className="flex items-center justify-center w-[280px] h-[280px] px-10 pb-12">
+                        <Link href={`/singleProduct/${product.sku}`}><img className="object-cover w-[270px] h-auto" src={product.image} alt="" /></Link>
                     </div>
                     <div className="p-0 m-0 poppins font-[400] text-[16px]">
                         <h2>

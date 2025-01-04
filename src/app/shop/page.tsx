@@ -1,5 +1,6 @@
 "use client"
 
+import { products } from "@/data/products";
 import Card from "../components/Card/page";
 import Navbar from "../components/Navbar";
 
@@ -46,9 +47,11 @@ export default function Shop() {
 
             <div className="flex items-center justify-center w-full">
                 <div className="py-11 grid grid-cols-4 gap-5 w-[88%]">
-                    {Array(16).fill(null).map((_, index) => (
-                        <Card key={index} />
-                    ))}
+                    {
+                        products.map((product)=>(
+                            <Card key={product.sku} product={product}/>
+                        ))
+                    }
                 </div>
             </div>
 

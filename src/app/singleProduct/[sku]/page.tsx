@@ -1,12 +1,18 @@
 'use client'
 import { useState } from "react";
-import Card from "../components/Card/page";
-import Modal from "../components/Modal";
-import Navbar from "../components/Navbar";
+import Card from "../../components/Card/page";
+import Modal from "../../components/Modal";
+import Navbar from "../../components/Navbar";
 import Link from "next/link";
+import { Product, products } from "@/data/products";
 
+type singleProductProp = {
+    params: {
+        sku: string
+    }
+}
 
-export default function Shop() {
+export default function singleProduct({ params: { sku } }: singleProductProp) {
 
     const [showModal, setShowModal] = useState(false);
     const [count, setCount] = useState(0);
@@ -17,41 +23,53 @@ export default function Shop() {
     const SubCount = () => {
         setCount(count - 1);
     }
-    
+
+    const product = products.values().find((b) => b.sku === sku)
+
+    if (!product) {
+        return (
+            <>
+                <div className="flex items-center justify-center min-h-screen">
+                    <h1 className="font-extrabold text-2xl text-red-500">Not Found </h1>
+                </div>
+            </>
+        )
+    }
+
 
     return (
         <>
             <Navbar isHome={false} />
 
             <div className="bg-white flex items-center justify-start w-full h-[110px]">
-                <div className="mx-24 py-4 w-[25%] flex items-center justify-between poppins font-[400] text-[16px]">
+                <div className="mx-24 py-4 w-[35%] flex items-center justify-between poppins font-[400] text-[16px]">
                     <h3 className="text-[#9f9f9f]">Home</h3>
                     <i className="fa-solid fa-angle-right"></i>
                     <h3 className="text-[#9f9f9f]">Shop</h3>
                     <i className="fa-solid fa-angle-right"></i>
                     <div className="h-[40px] w-[3px] bg-gray-400"></div>
-                    <p className="text-black">Asgaard Sofa</p>
+                    <p className="text-black">{product.name}</p>
                 </div>
             </div>
 
             <div className="py-4 flex items-start justify-center w-full ">
                 <div className="flex items-start justify-center w-[43%] gap-4">
                     <div className="flex flex-col items-center justify-center w-[20%] gap-4">
-                        <div className="flex items-center justify-center bg-[#fff9e5] py-4 px-1 m-0 rounded-lg"><img src="./Outdoor sofa set 2.png" alt="" /></div>
-                        <div className="flex items-center justify-center bg-[#fff9e5] py-4 px-1 m-0 rounded-lg"><img src="./Outdoor sofa set_2 1.png" alt="" /></div>
-                        <div className="flex items-center justify-center bg-[#fff9e5] py-2 px-1 m-0 rounded-lg"><img src="./Stuart sofa 1.png" alt="" /></div>
-                        <div className="flex items-center justify-center bg-[#fff9e5] py-4 px-1 m-0 rounded-lg"><img src="./Maya sofa three seater (1) 1.png" alt="" /></div>
+                        <div className="flex items-center justify-center bg-[#fff9e5] py-4 px-1 m-0 rounded-lg w-[76px] h-[80px]"><img className="w-full h-auto" src={product.image} alt="" /></div>
+                        <div className="flex items-center justify-center bg-[#fff9e5] py-4 px-1 m-0 rounded-lg w-[76px] h-[80px]"><img className="w-full h-auto" src={product.image} alt="" /></div>
+                        <div className="flex items-center justify-center bg-[#fff9e5] py-2 px-1 m-0 rounded-lg w-[76px] h-[80px]"><img className="w-full h-auto" src={product.image} alt="" /></div>
+                        <div className="flex items-center justify-center bg-[#fff9e5] py-4 px-1 m-0 rounded-lg w-[76px] h-[80px]"><img className="w-full h-auto" src={product.image} alt="" /></div>
                     </div>
                     <div>
                         <div className="flex items-center justify-center bg-[#fff9e5] py-1 px-0 m-0 w-[80%] h-[500px] rounded-lg">
-                            <img src="./Asgaard sofa 1.png" alt="" />
+                            <img className="w-full h-auto" src={product.image} alt="" />
                         </div>
                     </div>
                 </div>
                 <div className="gap-4 flex flex-col items-start justify-evenly min-h-screen w-[43%]">
                     <div>
-                        <h1 className=" poppins font-[400] text-[42px]"> Asgaard sofa</h1>
-                        <h3 className=" poppins font-[500] text-[24px] text-[#9f9f9f]"> Rs. 250,000.00</h3>
+                        <h1 className=" poppins font-[400] text-[42px]">{product.name}</h1>
+                        <h3 className=" poppins font-[500] text-[24px] text-[#9f9f9f]"> Rs. {product.price}</h3>
                     </div>
 
                     <div className="w-full flex items-center justify-start gap-5">
@@ -67,9 +85,7 @@ export default function Shop() {
                     </div>
                     <div className="text-[#000] poppins text-[13px] font-[400] w-[72%]">
                         <p>
-                            Setting the bar as one of the loudest speakers in its class,
-                            the Kilburn is a compact, stout-hearted hero with a well-balanced
-                            audio which boasts a clear midrange and extended highs for a sound.
+                            {product.description}
                         </p>
                     </div>
                     <div className="w-full flex flex-col items-start justify-start">
@@ -124,12 +140,12 @@ export default function Shop() {
                             <div className="py-2 w-full  flex items-center justify-start">
                                 <p className="w-[30%]">SKU</p>
                                 <p className="w-[5%]">:</p>
-                                <p className="w-[60%]">SS001</p>
+                                <p className="w-[60%]">{product.sku}</p>
                             </div>
                             <div className="py-2 w-full  flex items-center justify-start">
                                 <p className="w-[30%]">Category</p>
                                 <p className="w-[5%]">:</p>
-                                <p className="w-[60%]">Sofas</p>
+                                <p className="w-[60%]">{product.category}</p>
                             </div>
                             <div className="py-2 w-full  flex items-center justify-start">
                                 <p className="w-[30%]">Tags</p>
@@ -184,10 +200,10 @@ export default function Shop() {
 
                 <div className="flex justify-end items-center py-3 m-0 gap-8">
                     <div className="bg-[#fff9ef] py-20 px-4">
-                        <img className="w-[560px] h-[170px]" src="./Cloud sofa1.png" alt="" />
+                        <img className="w-[560px] h-[170px]" src="/Cloud sofa1.png" alt="" />
                     </div>
                     <div className="bg-[#fff9ef] py-20 px-4">
-                        <img className="w-[560px] h-[170px]" src="./Cloud sofa 11.png" alt="" />
+                        <img className="w-[560px] h-[170px]" src="/Cloud sofa 11.png" alt="" />
                     </div>
                 </div>
             </div>
@@ -200,16 +216,16 @@ export default function Shop() {
                 </div>
                 <div className="flex items-center justify-center pt-24 pb-3">
                     {
-                        Array(4).fill(null).map((_, index) => (
-                            <Card key={index} />
+                        products.slice(0, 4).map((product) => (
+                            <Card key={product.sku} product={product} />
                         ))
                     }
                 </div>
                 <div className="poppins font-[500] text-[24px] py-10 ">
                     <Link href="/shop">
-                    <button className="border-b-[3px] border-black pb-4">
-                        View More
-                    </button>
+                        <button className="border-b-[3px] border-black pb-4">
+                            View More
+                        </button>
                     </Link>
                 </div>
             </div>
