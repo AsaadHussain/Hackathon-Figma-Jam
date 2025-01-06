@@ -1,10 +1,10 @@
 'use client'
-import { useState } from "react";
+import React, { useState } from "react";
 import Card from "../../components/Card/page";
 import Modal from "../../components/Modal";
 import Navbar from "../../components/Navbar";
 import Link from "next/link";
-import { Product, products } from "@/data/products";
+import { products } from "@/data/products";
 
 type singleProductProp = {
     params: {

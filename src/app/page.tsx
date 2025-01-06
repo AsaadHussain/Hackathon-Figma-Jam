@@ -3,7 +3,7 @@
 import Card from "@/app/components/Card/page";
 import Link from "next/link";
 import Navbar from "./components/Navbar";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Product } from "@/data/products";
 
 export default function Home() {
@@ -26,7 +26,7 @@ export default function Home() {
         fetchProducts()
     }, []);
 
-    if(loading){
+    if (loading) {
         return <div>Loading...</div>
     }
 
@@ -101,7 +101,7 @@ export default function Home() {
                 <div className="flex items-center justify-center pt-24 pb-3 gap-2">
                     {
                         products.slice(0, 4).map((product) => (
-                            <Card key={product.sku} product={product}/>
+                            <Card key={product.sku} product={product} />
                         ))
                     }
                 </div>
