@@ -1,6 +1,6 @@
 "use client"
 
-import Navbar from "../../components/Navbar"
+import Navbar from "../../components/Navbar/index"
 
 export default function Account() {
     return (

@@ -2,13 +2,13 @@
 "use client"
 
 import Link from "next/link"
-import styles from '@/app/components/Navbar/header.module.css';
+import styles from '@/components/Navbar/header.module.css';
 
 type NavbarProps = {
     isHome?: boolean
 }
 
-export default function Navbar({isHome=false}:NavbarProps) {
+export default function Navbar({ isHome = false }: NavbarProps) {
 
     return (
         <>
