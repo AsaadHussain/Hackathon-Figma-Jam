@@ -8,7 +8,7 @@ interface CardProp {
     product: Product
 }
 
-export default function Card({ product }: CardProp) {
+export default function ProductCard({ product }: CardProp) {
 
     return (
         <>

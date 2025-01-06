@@ -1,9 +1,9 @@
 "use client"
 
-import Card from "@/app/components/Card/page";
-import Navbar from "../components/Navbar";
+import Navbar from "../../components/Navbar";
 import { useContext } from "react";
 import { ProductData } from "@/context/productData/context";
+import ProductCard from "@/components/ProducrCard/page";
 
 export default function Shop() {
 
@@ -53,7 +53,7 @@ export default function Shop() {
                 <div className="py-11 grid grid-cols-4 gap-5 w-[88%]">
                     {
                         products?.products.map((product)=>(
-                            <Card key={product.sku} product={product}/>
+                            <ProductCard key={product.sku} product={product}/>
                         ))
                     }
                 </div>

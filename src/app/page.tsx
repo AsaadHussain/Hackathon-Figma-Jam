@@ -1,8 +1,8 @@
 "use client"
 
-import Card from "@/app/components/Card/page";
+import ProductCard from "@/components/ProducrCard/page";
 import Link from "next/link";
-import Navbar from "./components/Navbar";
+import Navbar from "../components/Navbar";
 import React, { useContext } from "react"
 import { ProductData } from "@/context/productData/context";
 
@@ -81,7 +81,7 @@ export default function Home() {
                 <div className="flex items-center justify-center pt-24 pb-3 gap-2">
                     {
                         products?.products.slice(0,4).map((product)=>(
-                            <Card key={product.sku} product={product}/>
+                            <ProductCard key={product.sku} product={product}/>
                         ))
                     }
                 </div>

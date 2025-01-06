@@ -1,8 +1,9 @@
 'use client'
+
 import React, { useContext, useState } from "react";
-import Card from "@/app/components/Card/page";
-import Modal from "../../components/Modal";
-import Navbar from "../../components/Navbar";
+import ProductCard from "@/components/ProducrCard/page";
+import Modal from "../../../components/Modal";
+import Navbar from "../../../components/Navbar";
 import Link from "next/link";
 import { ProductData } from "@/context/productData/context";
 
@@ -219,7 +220,7 @@ export default function SingleProduct({ params: { sku } }: singleProductProp) {
                 <div className="flex items-center justify-center pt-24 pb-3">
                     {
                         products?.products.slice(0, 4).map((product) => (
-                            <Card key={product.sku} product={product} />
+                            <ProductCard key={product.sku} product={product} />
                         ))
                     }
                 </div>
