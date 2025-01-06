@@ -12,7 +12,7 @@ type singleProductProp = {
     }
 }
 
-export default function singleProduct({ params: { sku } }: singleProductProp) {
+export default function SingleProduct({ params: { sku } }: singleProductProp) {
 
     const [showModal, setShowModal] = useState(false);
     const [count, setCount] = useState(0);
