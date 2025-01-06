@@ -1,6 +1,6 @@
 'use client'
 import React, { useState } from "react";
-import Card from "../../components/Card/page";
+import Card from "@/app/components/Card/page";
 import Modal from "../../components/Modal";
 import Navbar from "../../components/Navbar";
 import Link from "next/link";

@@ -1,7 +1,7 @@
 "use client"
 
 import { products } from "@/data/products";
-import Card from "../components/Card/page";
+import Card from "@/app/components/Card/page";
 import Navbar from "../components/Navbar";
 
 export default function Shop() {
