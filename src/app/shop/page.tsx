@@ -1,10 +1,14 @@
 "use client"
 
-import { products } from "@/data/products";
 import Card from "@/app/components/Card/page";
 import Navbar from "../components/Navbar";
+import { useContext } from "react";
+import { ProductData } from "@/context/productData/context";
 
 export default function Shop() {
+
+    const products = useContext(ProductData)
+
     return (
         <>
             <Navbar isHome={false} />
@@ -48,7 +52,7 @@ export default function Shop() {
             <div className="flex items-center justify-center w-full">
                 <div className="py-11 grid grid-cols-4 gap-5 w-[88%]">
                     {
-                        products.map((product)=>(
+                        products?.products.map((product)=>(
                             <Card key={product.sku} product={product}/>
                         ))
                     }

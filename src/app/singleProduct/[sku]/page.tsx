@@ -1,10 +1,10 @@
 'use client'
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import Card from "@/app/components/Card/page";
 import Modal from "../../components/Modal";
 import Navbar from "../../components/Navbar";
 import Link from "next/link";
-import { products } from "@/data/products";
+import { ProductData } from "@/context/productData/context";
 
 type singleProductProp = {
     params: {
@@ -13,6 +13,8 @@ type singleProductProp = {
 }
 
 export default function SingleProduct({ params: { sku } }: singleProductProp) {
+
+    const products = useContext(ProductData)
 
     const [showModal, setShowModal] = useState(false);
     const [count, setCount] = useState(0);
@@ -24,7 +26,7 @@ export default function SingleProduct({ params: { sku } }: singleProductProp) {
         setCount(count - 1);
     }
 
-    const product = products.values().find((b) => b.sku === sku)
+    const product = products?.products.values().find((b) => b.sku === sku)
 
     if (!product) {
         return (
@@ -216,7 +218,7 @@ export default function SingleProduct({ params: { sku } }: singleProductProp) {
                 </div>
                 <div className="flex items-center justify-center pt-24 pb-3">
                     {
-                        products.slice(0, 4).map((product) => (
+                        products?.products.slice(0, 4).map((product) => (
                             <Card key={product.sku} product={product} />
                         ))
                     }
