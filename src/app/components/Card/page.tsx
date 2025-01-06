@@ -3,11 +3,11 @@
 import { Product } from "@/data/products";
 import Link from "next/link";
 
-type cardProp = {
+type CardProp = {
     product: Product
 }
 
-export default function Card({ product }: cardProp) {
+export default function Card({ product }: CardProp) {
     return (
         <>
             <div
