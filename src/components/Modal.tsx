@@ -37,7 +37,7 @@ export default function Modal({ isVisible, onClose }: ModalProps) {
           <div className="w-full flex items-center justify-center">
             <div className="w-2/5">
               <div className="flex items-center justify-center bg-[#fbebb5]
-            p-0 m-0 rounded-lg w-[105px] h-[105px]"><img className="w-[105px] h-[90px]" src="./Asgaard sofa 1.png" alt="" />
+            p-0 m-0 rounded-lg w-[105px] h-[105px]"><img className="w-[105px] h-[90px]" src="/Asgaard sofa 1.png" alt="" />
               </div>
             </div>
             <div className="w-2/5 flex flex-col items-center justify-center">
